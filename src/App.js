@@ -1,7 +1,14 @@
 import "./App.css";
-import Navbar from "./components/Navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import NavBar from "./components/NavBar";
+import Banner from "./components/Banner";
 function App() {
-  return <Navbar />;
+  return (
+    <div className="App">
+      <NavBar />
+      <Banner />
+    </div>
+  );
 }
 
 export default App;

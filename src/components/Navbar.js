@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavIcon1 from "../assets/img/nav-icon1.svg";
-import NavIcon2 from "../assets/img/nav-icon2.svg";
-import NavIcon3 from "../assets/img/nav-icon3.svg";
+import navIcon1 from "../assets/img/nav-icon1.svg";
+import navIcon2 from "../assets/img/nav-icon2.svg";
+import navIcon3 from "../assets/img/nav-icon3.svg";
 import logo from "../assets/img/logo.svg";
 
-function BasicExample() {
+import React from "react";
+
+const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -65,26 +67,17 @@ function BasicExample() {
             </Nav.Link>
           </Nav>
           <span className="navbar-text">
-            <div className="social-icon">
-              <a href="#">
-                <img src={NavIcon1} alt="" />{" "}
-              </a>
-              <a href="#">
-                <img src={NavIcon2} alt="" />{" "}
-              </a>
-              <a href="#">
-                <img src={NavIcon3} alt="" />{" "}
-              </a>
-            </div>
-            <button className="vvd" onClick={() => console.log("connect")}>
-              {" "}
-              <span>Let's Connect</span>
-            </button>
-          </span>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+              <div className="social-icon">
+                <a href="#"><img src={navIcon1} alt="" /></a>
+                <a href="#"><img src={navIcon2} alt="" /></a>
+                <a href="#"><img src={navIcon3} alt="" /></a>
+              </div>
+                <button className="vvd"><span>Let’s Connect</span></button>
+            </span>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
   );
-}
+};
 
-export default BasicExample;
+export default NavBar;
