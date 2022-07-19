@@ -3,8 +3,6 @@ import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png";
 
 const Skills = () => {
@@ -36,9 +34,10 @@ const Skills = () => {
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.<br></br> Lorem Ipsum has been the industry's standard
-                dummy text.
+                I am able to grasp new technologies and concepts quickly to
+                develop innovative and creative solutions to problems. <br></br>{" "}
+                I am always eager to learn about various technologies, tools,
+                and libraries.
               </p>
               <Carousel
                 responsive={responsive}
@@ -47,11 +46,15 @@ const Skills = () => {
               >
                 <div className="item">
                   <img src={meter1} alt="item-img" />
-                  <h5>Web Development</h5>
+                  <h5>React</h5>
                 </div>
                 <div className="item">
                   <img src={meter2} alt="item-img" />
-                  <h5>React</h5>
+                  <h5>Django</h5>
+                </div>
+                <div className="item">
+                  <img src={meter1} alt="item-img" />
+                  <h5>JavaScript </h5>
                 </div>
                 <div className="item">
                   <img src={meter3} alt="item-img" />
@@ -59,14 +62,26 @@ const Skills = () => {
                 </div>
                 <div className="item">
                   <img src={meter1} alt="item-img" />
-                  <h5>Backend Development</h5>
+                  <h5>SASS </h5>
+                </div>
+                <div className="item">
+                  <img src={meter3} alt="item-img" />
+                  <h5>Bootstrap </h5>
+                </div>
+                <div className="item">
+                  <img src={meter3} alt="item-img" />
+                  <h5>Git </h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="item-img" />
+                  <h5>PostgreSQL </h5>
                 </div>
               </Carousel>
             </div>
           </div>
         </div>
       </div>
-      <img className="background-image-left" src={colorSharp} alt="Image" />
+      <img className="background-image-left" src={colorSharp} alt="corner" />
     </section>
   );
 };
