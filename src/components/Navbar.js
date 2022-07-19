@@ -74,10 +74,11 @@ const NavBar = () => {
                 <a
                   href="https://www.linkedin.com/in/omer-dasar/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <img src={navIcon1} alt="linkedIn" />
                 </a>
-                <a href="https://github.com/omerfdasar" target="_blank">
+                <a href="https://github.com/omerfdasar" target="_blank" rel="noreferrer">
                   <img src={navIcon2} alt="github" />
                 </a>
               </div>

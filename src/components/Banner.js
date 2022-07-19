@@ -16,15 +16,6 @@ const Banner = () => {
     "Full Stack Developer",
   ];
   const period = 2000;
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => {
-      clearInterval(ticker);
-    };
-  }, [text]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -53,6 +44,16 @@ const Banner = () => {
     }
   };
 
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, delta);
+
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [text, delta]);
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -70,8 +71,8 @@ const Banner = () => {
                     {`Hi! I'm Omer`} <br />
                     <span
                       className="txt-rotate"
-                      dataPeriod="1000"
-                      data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'
+                      dataperiod="1000"
+                      data-rotate='[ "Frontend Developer", "Web Developer", "Full Stack Developer" ]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
@@ -87,6 +88,7 @@ const Banner = () => {
                   <a
                     href="https://www.linkedin.com/in/omer-dasar/"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Let’s Connect <ArrowRightCircle size={25} />
                   </a>
