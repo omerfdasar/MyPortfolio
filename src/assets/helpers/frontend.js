@@ -2,7 +2,7 @@ import projImg2 from "../img/project-img2.jpg";
 import projImg1 from "../img/project-img1.jpg";
 import projImg3 from "../img/project-img3.jpg";
 import projImg4 from "../img/project-img4.jpg";
-import projImg5 from "../img/project-img5.jpg";
+// import projImg5 from "../img/project-img5.jpg";
 import projImg6 from "../img/project-img6.jpg";
 import projImg7 from "../img/project-img7.jpg";
 import projImg8 from "../img/project-img8.jpg";
