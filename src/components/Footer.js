@@ -27,7 +27,7 @@ const Footer = () => {
                 <img src={navIcon2} alt="github" />
               </a>
             </div>
-            <p>Copyright 2022. All Rights Reserved</p>
+            <p>Copyright {new Date().getFullYear()}. All Rights Reserved</p>
           </Col>
         </Row>
       </Container>

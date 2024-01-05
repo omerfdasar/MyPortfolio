@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 // import "animate.css";
 import TrackVisibility from "react-on-screen";
+import emailjs from "emailjs-com";
 const Contact = () => {
   const formInitialDetails = {
     firstName: "",
@@ -22,28 +23,35 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code === 200) {
-      setStatus({ succes: true, message: "Message sent successfully" });
-    } else {
-      setStatus({
-        succes: false,
-        message: "Something went wrong, please try again later.",
-      });
-    }
+
+    emailjs
+      .send(
+        "service_n0gzhqs",
+        "template_1a99l68",
+        formDetails,
+        "-sIth6NYYzff0HYyU"
+      )
+      .then(
+        (response) => {
+          console.log("Email sent successfully:", response);
+          setButtonText("Send");
+          setFormDetails(formInitialDetails);
+          setStatus({ success: true, message: "Email sent successfully" });
+        },
+        (error) => {
+          console.error("Failed to send email:", error);
+          setButtonText("Send");
+          setStatus({
+            success: false,
+            message: "Something went wrong, please try again later.",
+          });
+        }
+      );
   };
+
   return (
     <section className="contact" id="connect">
       <Container>
@@ -121,21 +129,21 @@ const Contact = () => {
                             onFormUpdate("message", e.target.value)
                           }
                         ></textarea>
+                        {status.message && (
+                          <Col>
+                            <p
+                              className={
+                                status.success === false ? "danger" : "success"
+                              }
+                            >
+                              {status.message}
+                            </p>
+                          </Col>
+                        )}
                         <button type="submit">
                           <span>{buttonText}</span>
                         </button>
                       </Col>
-                      {status.message && (
-                        <Col>
-                          <p
-                            className={
-                              status.success === false ? "danger" : "success"
-                            }
-                          >
-                            {status.message}
-                          </p>
-                        </Col>
-                      )}
                     </Row>
                   </form>
                 </div>
