@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
-import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
+import { useEffect, useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import { ArrowRightCircle } from "react-bootstrap-icons";
 import TrackVisibility from "react-on-screen";
+import headerImg from "../assets/img/header-img.svg";
 const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);

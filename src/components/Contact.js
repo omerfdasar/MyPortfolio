@@ -1,9 +1,9 @@
-import { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/contact-img.svg";
 import "animate.css";
-import TrackVisibility from "react-on-screen";
 import emailjs from "emailjs-com";
+import { useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import TrackVisibility from "react-on-screen";
+import contactImg from "../assets/img/contact-img.svg";
 const Contact = () => {
   const formInitialDetails = {
     from_name: "",
@@ -36,13 +36,11 @@ const Contact = () => {
       )
       .then(
         (response) => {
-          console.log("Email sent successfully:", response);
           setButtonText("Send");
           setFormDetails(formInitialDetails);
           setStatus({ success: true, message: "Email sent successfully" });
         },
         (error) => {
-          console.error("Failed to send email:", error);
           setButtonText("Send");
           setStatus({
             success: false,

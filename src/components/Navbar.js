@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/github.svg";
+import navIcon1 from "../assets/img/nav-icon1.svg";
 
-import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
