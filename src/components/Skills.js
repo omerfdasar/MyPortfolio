@@ -1,14 +1,13 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import colorSharp from "../assets/img/color-sharp.png";
+import meter1 from "../assets/img/meter1.svg";
+import meter2 from "../assets/img/meter2.svg";
+import meter3 from "../assets/img/meter3.svg";
 
 const Skills = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -42,6 +41,7 @@ const Skills = () => {
               <Carousel
                 responsive={responsive}
                 infinite={true}
+                autoPlay={true}
                 className="owl-carousel owl-theme skill-slider"
               >
                 <div className="item">
@@ -49,9 +49,14 @@ const Skills = () => {
                   <h5>React</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt="item-img" />
-                  <h5>Django</h5>
+                  <img src={meter1} alt="item-img" />
+                  <h5>Spring Boot</h5>
                 </div>
+                <div className="item">
+                  <img src={meter1} alt="item-img" />
+                  <h5>Java</h5>
+                </div>
+
                 <div className="item">
                   <img src={meter1} alt="item-img" />
                   <h5>JavaScript </h5>
@@ -70,11 +75,39 @@ const Skills = () => {
                 </div>
                 <div className="item">
                   <img src={meter3} alt="item-img" />
+                  <h5>Tailwind </h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="item-img" />
+                  <h5>Django</h5>
+                </div>
+                <div className="item">
+                  <img src={meter1} alt="item-img" />
+                  <h5>Next.js</h5>
+                </div>
+                <div className="item">
+                  <img src={meter3} alt="item-img" />
+                  <h5>TypeScript </h5>
+                </div>
+                <div className="item">
+                  <img src={meter3} alt="item-img" />
                   <h5>Git </h5>
                 </div>
                 <div className="item">
                   <img src={meter2} alt="item-img" />
                   <h5>PostgreSQL </h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="item-img" />
+                  <h5>Jest </h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="item-img" />
+                  <h5>Cypress </h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="item-img" />
+                  <h5>AWS </h5>
                 </div>
               </Carousel>
             </div>

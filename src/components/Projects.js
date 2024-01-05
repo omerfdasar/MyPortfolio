@@ -1,14 +1,13 @@
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { ProjectCard } from "./ProjectCard";
-import { projects1 } from "../assets/helpers/frontend";
-import { projects2 } from "../assets/helpers/frontend";
-import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
+import { Col, Container, Nav, Row, Tab } from "react-bootstrap";
 import TrackVisibility from "react-on-screen";
+import { projects1, projects2 } from "../assets/helpers/frontend";
+import colorSharp2 from "../assets/img/color-sharp2.png";
+import { ProjectCard } from "./ProjectCard";
 
 const Projects = () => {
   return (
-    <section className="project" id="project">
+    <section className="project" id="projects">
       <Container>
         <Row>
           <Col size={12}>
