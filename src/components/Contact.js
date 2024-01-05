@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
-// import "animate.css";
+import "animate.css";
 import TrackVisibility from "react-on-screen";
 import emailjs from "emailjs-com";
 const Contact = () => {
   const formInitialDetails = {
-    firstName: "",
+    from_name: "",
     lastName: "",
-    email: "",
+    to_name: "",
     phone: "",
     message: "",
   };
@@ -83,10 +83,10 @@ const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="text"
-                          value={formDetails.firstName}
+                          value={formDetails.from_name}
                           placeholder="First Name"
                           onChange={(e) =>
-                            onFormUpdate("firstName", e.target.value)
+                            onFormUpdate("from_name", e.target.value)
                           }
                         />
                       </Col>
@@ -103,10 +103,10 @@ const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="email"
-                          value={formDetails.email}
+                          value={formDetails.to_name}
                           placeholder="Email Address"
                           onChange={(e) =>
-                            onFormUpdate("email", e.target.value)
+                            onFormUpdate("to_name", e.target.value)
                           }
                         />
                       </Col>
